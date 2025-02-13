@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f1f3f6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #2874f0;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 40px;
+        }
+        .search-box {
+            width: 50%;
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+        .banner img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            animation: slide 10s infinite linear;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            50% { transform: translateX(-100%); }
+            100% { transform: translateX(0%); }
+        }
+
+        /* Category Section */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: white;
+            margin: 10px;
+        }
+        .category {
+            text-align: center;
+        }
+        .category img {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Products Section */
+        .container {
+            padding: 20px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .product {
+            background: white;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+        .cart-btn {
+            background: orange;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .cart-btn:hover {
+            background: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Flipkart_logo.png" alt="Flipkart Logo">
+        <input type="text" class="search-box" placeholder="Search for products, brands and more">
+        <div class="navbar-links">
+            <a href="#">Login</a>
+            <a href="#">Cart</a>
+            <a href="#">More</a>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="https://via.placeholder.com/1200x400" alt="Banner">
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div class="category">
+            <img src="https://via.placeholder.com/60" alt="Mobiles">
+            <p>Mobiles</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/60" alt="Electronics">
+            <p>Electronics</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/60" alt="Fashion">
+            <p>Fashion</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/60" alt="Appliances">
+            <p>Appliances</p>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <div class="container">
+        <h2>Top Deals</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h4>Smartphone</h4>
+                <p class="price">₹9,999 <del>₹12,999</del></p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h4>Laptop</h4>
+                <p class="price">₹39,999 <del>₹45,999</del></p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h4>Headphones</h4>
+                <p class="price">₹1,299 <del>₹1,999</del></p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
